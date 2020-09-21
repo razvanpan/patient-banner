@@ -61,8 +61,15 @@
     "dist"
   ],
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@types/node-sass": "^4.11.1",
+    "@types/styled-components": "^5.1.3",
+    "file-loader": "^6.1.0",
     "node-sass": "^4.14.1",
-    "terra-card": "^3.34.0"
+    "terra-card": "^3.34.0",
+    "terra-cell-grid": "^1.7.0",
+    "terra-dynamic-grid": "^3.29.0",
+    "terra-grid": "^6.24.0",
+    "terra-image": "^3.31.0"
   }
 }

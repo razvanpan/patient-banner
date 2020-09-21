@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export declare const ExampleComponent: () => JSX.Element;
+export declare const PatientBannerComponent: () => JSX.Element;

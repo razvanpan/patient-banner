@@ -1,10 +1,10 @@
 import * as React from 'react'
-import CardPadding from './components/card-component.component'
+import PatientBanner from './components/card-component/card-component.component'
 
-export const ExampleComponent = () => {
+export const PatientBannerComponent = () => {
   return (
     <div>
-      <CardPadding></CardPadding>
+      <PatientBanner></PatientBanner>
     </div>
   )
 }

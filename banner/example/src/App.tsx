@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { ExampleComponent } from 'banner'
+import { PatientBannerComponent } from 'banner'
 import 'banner/dist/index.css'
 
-const App = () => {
-  return <ExampleComponent></ExampleComponent>
+function App() {
+  return (
+    <div className='App'>
+      <PatientBannerComponent></PatientBannerComponent>
+    </div>
+  )
 }
 
 export default App
