@@ -9,7 +9,7 @@ var Typography = _interopDefault(require('@material-ui/core/Typography'));
 var useStyles = styles.makeStyles(function (theme) {
   return styles.createStyles({
     root: {
-      padding: '2px 1px 2px 1px',
+      padding: '5px 1px 2px 1px',
       flexGrow: 1,
       top: '0',
       bottom: '0',
@@ -17,7 +17,6 @@ var useStyles = styles.makeStyles(function (theme) {
       right: '0',
       position: 'fixed',
       backgroundColor: 'lightBlue',
-      marginTop: theme.spacing(1),
       borderRadius: '15px',
       display: 'flex'
     },
@@ -142,9 +141,11 @@ function PatientBanner() {
     variant: 'caption',
     color: 'textSecondary'
   }, "Allergies(3):", ' ', React__default.createElement(Typography, {
-    variant: 'button',
-    color: 'error',
-    gutterBottom: true
+    variant: 'caption',
+    style: {
+      backgroundColor: 'white',
+      color: 'red'
+    }
   }, "PENICILINE"), ", Bee Venom, Latex")), React__default.createElement(Grid, {
     xs: true,
     item: true,

@@ -1,14 +1,12 @@
 import React from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-// import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-// import ButtonBase from '@material-ui/core/ButtonBase'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      padding: '2px 1px 2px 1px',
+      padding: '5px 1px 2px 1px',
       flexGrow: 1,
       top: '0',
       bottom: '0',
@@ -16,7 +14,6 @@ const useStyles = makeStyles((theme: Theme) =>
       right: '0',
       position: 'fixed',
       backgroundColor: 'lightBlue',
-      marginTop: theme.spacing(1),
       borderRadius: '15px',
       display: 'flex'
     },
@@ -139,7 +136,10 @@ export default function PatientBanner() {
             color='textSecondary'
           >
             Allergies(3):{' '}
-            <Typography variant='button' color='error' gutterBottom>
+            <Typography
+              variant='caption'
+              style={{ backgroundColor: 'white', color: 'red' }}
+            >
               PENICILINE
             </Typography>
             , Bee Venom, Latex

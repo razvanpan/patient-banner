@@ -1,5 +1,5 @@
 import * as React from 'react'
-import PatientBanner from './components/card-component/card-component.component'
+import PatientBanner from './components/grid-component/grid-component.component'
 
 export const PatientBannerComponent = () => {
   return (
