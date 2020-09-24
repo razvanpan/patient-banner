@@ -1,206 +1,195 @@
 import React__default, { createElement } from 'react';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import CellGrid, { Cell } from 'terra-cell-grid';
+import Grid from 'terra-grid';
+import ItemDisplay from 'terra-clinical-item-display';
 
-const useStyles = makeStyles(theme => createStyles({
-  root: {
-    padding: '5px 1px 2px 1px',
-    flexGrow: 1,
-    top: '0',
-    bottom: '0',
-    left: '0',
-    right: '0',
-    position: 'fixed',
-    backgroundColor: 'lightBlue',
-    borderRadius: '15px',
-    display: 'flex'
+var classes = {"root":"_cell-grid-component-component__root__1SrKG","paper":"_cell-grid-component-component__paper__2CqBf","paperText":"_cell-grid-component-component__paperText__1Dk2f","left":"_cell-grid-component-component__left__1oun2","leftText":"_cell-grid-component-component__leftText__2Jhap","right":"_cell-grid-component-component__right__3SUXN","rightText":"_cell-grid-component-component__rightText__1obU9","image":"_cell-grid-component-component__image__3Bzeq","img":"_cell-grid-component-component__img__byrhp","oneLineStyle":"_cell-grid-component-component__oneLineStyle__3e8ZW"};
+
+const CellGridComponent = () => React__default.createElement(CellGrid, {
+  className: classes.root
+}, React__default.createElement(Cell, {
+  key: 'img',
+  width: {
+    static: {
+      value: 40,
+      unit: 'px'
+    }
   },
-  paper: {
-    padding: '2px 5px 2px 5px',
-    textAlign: 'center',
-    color: theme.palette.text.secondary
-  },
-  left: {
-    padding: '2px 5px 2px 5px',
-    textAlign: 'left',
-    color: theme.palette.text.secondary,
-    paddingRight: '10px'
-  },
-  right: {
-    padding: '2px 5px 2px 5px',
-    textAlign: 'right',
-    color: theme.palette.text.secondary
-  },
-  image: {
-    width: '50px',
-    height: '50px'
-  },
-  img: {
-    margin: 'round',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    borderRadius: '30px 30px',
-    marginLeft: theme.spacing(2)
-  },
-  oneLineStyle: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start'
+  style: {
+    justifyContent: 'center'
   }
-}));
-function PatientBanner() {
-  const classes = useStyles();
-  return React__default.createElement(Grid, {
-    container: true,
-    spacing: 0,
-    justify: 'flex-start',
-    alignItems: 'flex-start',
-    direction: 'row',
-    className: classes.root
-  }, React__default.createElement(Grid, {
-    item: true
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement("div", {
-    className: classes.image
-  }, React__default.createElement("img", {
-    className: classes.img,
-    alt: 'complex',
-    src: 'https://i.pinimg.com/originals/a6/c9/50/a6c950b115e5719a22fc1f866fffc21e.jpg'
-  })))), React__default.createElement(Grid, {
-    item: true,
-    className: classes.left
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textPrimary',
-    gutterBottom: true
-  }, "\uD83C\uDFF4Bruno Mertens")), React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "M 42yrs (13.07.1977) ID: 1030114"))), React__default.createElement(Grid, {
-    item: true,
-    className: classes.right,
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px',
-      marginLeft: '10%'
+}, React__default.createElement("div", {
+  className: classes.image
+}, React__default.createElement("img", {
+  className: classes.img,
+  alt: 'complex',
+  src: 'https://i.pinimg.com/originals/a6/c9/50/a6c950b115e5719a22fc1f866fffc21e.jpg'
+}))), React__default.createElement(Cell, {
+  className: classes.left,
+  key: 'name',
+  width: {
+    static: {
+      value: 300,
+      unit: 'px'
     }
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "Length of Stay: 03:43")), React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "ED 302"))), React__default.createElement(Grid, {
-    item: true,
-    className: classes.left,
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px'
+  }
+}, React__default.createElement("div", null, React__default.createElement(Grid, {
+  className: classes.left
+}, React__default.createElement(Grid.Row, null, React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  text: '\uD83C\uDFF4Bruno Mertens',
+  textStyle: 'strong'
+})), React__default.createElement(Grid.Row, null, React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  text: 'M 42yrs (13.07.1977) ID: 1030114',
+  textStyle: 'secondary'
+}))))), React__default.createElement(Cell, {
+  key: 'stay',
+  width: {
+    static: {
+      value: 230,
+      unit: 'px'
     }
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column',
-    style: {
-      borderBottom: '1',
-      borderBottomColor: 'white',
-      borderBottomStyle: 'solid',
-      borderWidth: '1px'
+  }
+}, React__default.createElement("div", {
+  className: classes.right
+}, React__default.createElement(Grid, {
+  style: {
+    borderRight: '1',
+    borderRightColor: 'white',
+    borderRightStyle: 'solid',
+    borderWidth: '1px',
+    justifyContent: 'flex-end'
+  }
+}, React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'flex-end'
+  }
+}, React__default.createElement(ItemDisplay, {
+  className: classes.rightText,
+  text: 'Length of Stay: 03:43',
+  textStyle: 'secondary'
+})), React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'flex-end'
+  }
+}, React__default.createElement(ItemDisplay, {
+  className: classes.rightText,
+  text: 'ED 302',
+  textStyle: 'secondary'
+}))))), React__default.createElement(Cell, {
+  key: 'allergies',
+  className: classes.left,
+  width: {
+    static: {
+      value: 280,
+      unit: 'px'
     }
-  }, React__default.createElement(Typography, {
-    className: classes.oneLineStyle,
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "Allergies(3):", ' ', React__default.createElement(Typography, {
-    variant: 'caption',
-    style: {
-      backgroundColor: 'white',
-      color: 'red'
+  }
+}, React__default.createElement(Grid, {
+  style: {
+    borderRight: '1',
+    borderRightColor: 'white',
+    borderRightStyle: 'solid',
+    borderWidth: '1px'
+  }
+}, React__default.createElement(Grid.Row, {
+  style: {
+    borderBottom: '1',
+    borderBottomColor: 'white',
+    borderBottomStyle: 'solid',
+    borderWidth: '1px'
+  }
+}, React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  text: 'Allergies(3):  ',
+  textStyle: 'secondary'
+}), React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  style: {
+    backgroundColor: 'white'
+  },
+  text: ' Peniciline',
+  textStyle: 'attention'
+}), React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  text: ', Bee Venom, Latex',
+  textStyle: 'secondary'
+})), React__default.createElement(Grid.Row, null, React__default.createElement(ItemDisplay, {
+  className: classes.leftText,
+  text: 'Encounter ID: 392719372',
+  textStyle: 'secondary'
+})))), React__default.createElement(Cell, {
+  key: 'triage',
+  className: classes.paper,
+  width: {
+    static: {
+      value: 30,
+      unit: 'px'
     }
-  }, "PENICILINE"), ", Bee Venom, Latex")), React__default.createElement(Grid, {
-    xs: true,
-    item: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "Encounter ID: 392719372"))), React__default.createElement(Grid, {
-    item: true,
-    className: classes.paper,
-    spacing: 0,
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px'
+  }
+}, React__default.createElement(Grid, {
+  style: {
+    borderRight: '1',
+    borderRightColor: 'white',
+    borderRightStyle: 'solid',
+    borderWidth: '1px',
+    justifyContent: 'center'
+  }
+}, React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'center'
+  }
+}, React__default.createElement(ItemDisplay, {
+  text: 'Triage',
+  textStyle: 'secondary',
+  className: classes.paperText
+})), React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'center'
+  }
+}, React__default.createElement(ItemDisplay, {
+  text: '-',
+  textStyle: 'secondary',
+  className: classes.paperText
+})))), React__default.createElement(Cell, {
+  key: 'risks',
+  className: classes.paper,
+  width: {
+    static: {
+      value: 50,
+      unit: 'px'
     }
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "Triage")), React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "-"))), React__default.createElement(Grid, {
-    item: true,
-    className: classes.paper,
-    spacing: 0,
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px'
-    }
-  }, React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "Risks")), React__default.createElement(Grid, {
-    item: true,
-    xs: true,
-    direction: 'column'
-  }, React__default.createElement(Typography, {
-    variant: 'caption',
-    color: 'textSecondary'
-  }, "\uD83C\uDFE5\uD83E\uDDE0\uD83D\uDE4E\u200D\u2642\uFE0F"))));
-}
+  }
+}, React__default.createElement(Grid, {
+  style: {
+    borderRight: '1',
+    borderRightColor: 'white',
+    borderRightStyle: 'solid',
+    borderWidth: '1px'
+  }
+}, React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'center'
+  }
+}, React__default.createElement(ItemDisplay, {
+  className: classes.paperText,
+  text: 'Risks',
+  textStyle: 'secondary'
+})), React__default.createElement(Grid.Row, {
+  style: {
+    justifyContent: 'center'
+  }
+}, React__default.createElement(ItemDisplay, {
+  lassName: classes.paperText,
+  text: '\uD83C\uDFE5\uD83E\uDDE0\uD83D\uDE4E\u200D\u2642\uFE0F',
+  textStyle: 'secondary'
+})))), React__default.createElement(Cell, {
+  key: 'blank'
+}, React__default.createElement(Grid, null)));
 
 const PatientBannerComponent = () => {
-  return createElement("div", null, createElement(PatientBanner, null));
+  return createElement("div", null, createElement(CellGridComponent, null));
 };
 
 export { PatientBannerComponent };
