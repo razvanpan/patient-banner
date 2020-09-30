@@ -46,11 +46,8 @@ const CellGridComponent = () => (
     <Cell key='stay' width={{ static: { value: 230, unit: 'px' } }}>
       <div className={classes.right}>
         <Grid
+          className={classes.borderRight}
           style={{
-            borderRight: '1',
-            borderRightColor: 'white',
-            borderRightStyle: 'solid',
-            borderWidth: '1px',
             justifyContent: 'flex-end'
           }}
         >
@@ -76,22 +73,8 @@ const CellGridComponent = () => (
       className={classes.left}
       width={{ static: { value: 280, unit: 'px' } }}
     >
-      <Grid
-        style={{
-          borderRight: '1',
-          borderRightColor: 'white',
-          borderRightStyle: 'solid',
-          borderWidth: '1px'
-        }}
-      >
-        <Grid.Row
-          style={{
-            borderBottom: '1',
-            borderBottomColor: 'white',
-            borderBottomStyle: 'solid',
-            borderWidth: '1px'
-          }}
-        >
+      <Grid className={classes.borderRight}>
+        <Grid.Row className={classes.borderBottom}>
           <ItemDisplay
             className={classes.leftText}
             text='Allergies(3):  '
@@ -124,11 +107,8 @@ const CellGridComponent = () => (
       width={{ static: { value: 30, unit: 'px' } }}
     >
       <Grid
+        className={classes.borderRight}
         style={{
-          borderRight: '1',
-          borderRightColor: 'white',
-          borderRightStyle: 'solid',
-          borderWidth: '1px',
           justifyContent: 'center'
         }}
       >
@@ -153,14 +133,7 @@ const CellGridComponent = () => (
       className={classes.paper}
       width={{ static: { value: 50, unit: 'px' } }}
     >
-      <Grid
-        style={{
-          borderRight: '1',
-          borderRightColor: 'white',
-          borderRightStyle: 'solid',
-          borderWidth: '1px'
-        }}
-      >
+      <Grid className={classes.borderRight}>
         <Grid.Row style={{ justifyContent: 'center' }}>
           <ItemDisplay
             className={classes.paperText}

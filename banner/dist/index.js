@@ -7,7 +7,7 @@ var CellGrid__default = _interopDefault(CellGrid);
 var Grid = _interopDefault(require('terra-grid'));
 var ItemDisplay = _interopDefault(require('terra-clinical-item-display'));
 
-var classes = {"root":"_cell-grid-component-component__root__1SrKG","paper":"_cell-grid-component-component__paper__2CqBf","paperText":"_cell-grid-component-component__paperText__1Dk2f","left":"_cell-grid-component-component__left__1oun2","leftText":"_cell-grid-component-component__leftText__2Jhap","right":"_cell-grid-component-component__right__3SUXN","rightText":"_cell-grid-component-component__rightText__1obU9","image":"_cell-grid-component-component__image__3Bzeq","img":"_cell-grid-component-component__img__byrhp","oneLineStyle":"_cell-grid-component-component__oneLineStyle__3e8ZW"};
+var classes = {"root":"_cell-grid-component-component__root__1SrKG","paper":"_cell-grid-component-component__paper__2CqBf","paperText":"_cell-grid-component-component__paperText__1Dk2f","left":"_cell-grid-component-component__left__1oun2","leftText":"_cell-grid-component-component__leftText__2Jhap","right":"_cell-grid-component-component__right__3SUXN","rightText":"_cell-grid-component-component__rightText__1obU9","image":"_cell-grid-component-component__image__3Bzeq","img":"_cell-grid-component-component__img__byrhp","oneLineStyle":"_cell-grid-component-component__oneLineStyle__3e8ZW","borderRight":"_cell-grid-component-component__borderRight__qvn1y","borderBottom":"_cell-grid-component-component__borderBottom__3hQje"};
 
 var CellGridComponent = function CellGridComponent() {
   return React__default.createElement(CellGrid__default, {
@@ -59,11 +59,8 @@ var CellGridComponent = function CellGridComponent() {
   }, React__default.createElement("div", {
     className: classes.right
   }, React__default.createElement(Grid, {
+    className: classes.borderRight,
     style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px',
       justifyContent: 'flex-end'
     }
   }, React__default.createElement(Grid.Row, {
@@ -92,19 +89,9 @@ var CellGridComponent = function CellGridComponent() {
       }
     }
   }, React__default.createElement(Grid, {
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px'
-    }
+    className: classes.borderRight
   }, React__default.createElement(Grid.Row, {
-    style: {
-      borderBottom: '1',
-      borderBottomColor: 'white',
-      borderBottomStyle: 'solid',
-      borderWidth: '1px'
-    }
+    className: classes.borderBottom
   }, React__default.createElement(ItemDisplay, {
     className: classes.leftText,
     text: 'Allergies(3):  ',
@@ -134,11 +121,8 @@ var CellGridComponent = function CellGridComponent() {
       }
     }
   }, React__default.createElement(Grid, {
+    className: classes.borderRight,
     style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px',
       justifyContent: 'center'
     }
   }, React__default.createElement(Grid.Row, {
@@ -167,12 +151,7 @@ var CellGridComponent = function CellGridComponent() {
       }
     }
   }, React__default.createElement(Grid, {
-    style: {
-      borderRight: '1',
-      borderRightColor: 'white',
-      borderRightStyle: 'solid',
-      borderWidth: '1px'
-    }
+    className: classes.borderRight
   }, React__default.createElement(Grid.Row, {
     style: {
       justifyContent: 'center'
